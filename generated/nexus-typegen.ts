@@ -31,9 +31,36 @@ export interface NexusGenInputs {
   BannerWhereUniqueInput: { // input type
     id?: string | null; // ID
   }
+  QueryFindManyBannerOrderByInput: { // input type
+    id?: NexusGenEnums['OrderByArg'] | null; // OrderByArg
+    imgUrl?: NexusGenEnums['OrderByArg'] | null; // OrderByArg
+    url?: NexusGenEnums['OrderByArg'] | null; // OrderByArg
+  }
+  QueryFindManyBannerWhereInput: { // input type
+    AND?: NexusGenInputs['QueryFindManyBannerWhereInput'][] | null; // [QueryFindManyBannerWhereInput!]
+    id?: NexusGenInputs['StringFilter'] | null; // StringFilter
+    imgUrl?: NexusGenInputs['StringFilter'] | null; // StringFilter
+    NOT?: NexusGenInputs['QueryFindManyBannerWhereInput'][] | null; // [QueryFindManyBannerWhereInput!]
+    OR?: NexusGenInputs['QueryFindManyBannerWhereInput'][] | null; // [QueryFindManyBannerWhereInput!]
+    url?: NexusGenInputs['StringFilter'] | null; // StringFilter
+  }
+  StringFilter: { // input type
+    contains?: string | null; // String
+    endsWith?: string | null; // String
+    equals?: string | null; // String
+    gt?: string | null; // String
+    gte?: string | null; // String
+    in?: string[] | null; // [String!]
+    lt?: string | null; // String
+    lte?: string | null; // String
+    not?: string | null; // String
+    notIn?: string[] | null; // [String!]
+    startsWith?: string | null; // String
+  }
 }
 
 export interface NexusGenEnums {
+  OrderByArg: photon.OrderByArg
 }
 
 export interface NexusGenRootTypes {
@@ -51,6 +78,10 @@ export interface NexusGenAllTypes extends NexusGenRootTypes {
   BannerCreateInput: NexusGenInputs['BannerCreateInput'];
   BannerUpdateInput: NexusGenInputs['BannerUpdateInput'];
   BannerWhereUniqueInput: NexusGenInputs['BannerWhereUniqueInput'];
+  QueryFindManyBannerOrderByInput: NexusGenInputs['QueryFindManyBannerOrderByInput'];
+  QueryFindManyBannerWhereInput: NexusGenInputs['QueryFindManyBannerWhereInput'];
+  StringFilter: NexusGenInputs['StringFilter'];
+  OrderByArg: NexusGenEnums['OrderByArg'];
 }
 
 export interface NexusGenFieldTypes {
@@ -92,7 +123,9 @@ export interface NexusGenArgTypes {
       before?: string | null; // String
       first?: number | null; // Int
       last?: number | null; // Int
+      orderBy?: NexusGenInputs['QueryFindManyBannerOrderByInput'] | null; // QueryFindManyBannerOrderByInput
       skip?: number | null; // Int
+      where?: NexusGenInputs['QueryFindManyBannerWhereInput'] | null; // QueryFindManyBannerWhereInput
     }
   }
 }
@@ -104,9 +137,9 @@ export interface NexusGenInheritedFields {}
 
 export type NexusGenObjectNames = "Banner" | "Mutation" | "Query";
 
-export type NexusGenInputNames = "BannerCreateInput" | "BannerUpdateInput" | "BannerWhereUniqueInput";
+export type NexusGenInputNames = "BannerCreateInput" | "BannerUpdateInput" | "BannerWhereUniqueInput" | "QueryFindManyBannerOrderByInput" | "QueryFindManyBannerWhereInput" | "StringFilter";
 
-export type NexusGenEnumNames = never;
+export type NexusGenEnumNames = "OrderByArg";
 
 export type NexusGenInterfaceNames = never;
 

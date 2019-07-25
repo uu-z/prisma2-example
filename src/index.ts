@@ -27,7 +27,10 @@ const Query = objectType({
       alias: "banner"
     });
     t.crud.findManyBanner({
-      alias: "banners"
+      alias: "banners",
+      filtering: true,
+      ordering: true,
+      pagination: true
     });
   }
 });

@@ -29,7 +29,41 @@ type Mutation {
   updateOneBanner(data: BannerUpdateInput!, where: BannerWhereUniqueInput!): Banner
 }
 
+enum OrderByArg {
+  asc
+  desc
+}
+
 type Query {
   banner(where: BannerWhereUniqueInput!): Banner
-  banners(after: String, before: String, first: Int, last: Int, skip: Int): [Banner!]
+  banners(after: String, before: String, first: Int, last: Int, orderBy: QueryFindManyBannerOrderByInput, skip: Int, where: QueryFindManyBannerWhereInput): [Banner!]
+}
+
+input QueryFindManyBannerOrderByInput {
+  id: OrderByArg
+  imgUrl: OrderByArg
+  url: OrderByArg
+}
+
+input QueryFindManyBannerWhereInput {
+  AND: [QueryFindManyBannerWhereInput!]
+  id: StringFilter
+  imgUrl: StringFilter
+  NOT: [QueryFindManyBannerWhereInput!]
+  OR: [QueryFindManyBannerWhereInput!]
+  url: StringFilter
+}
+
+input StringFilter {
+  contains: String
+  endsWith: String
+  equals: String
+  gt: String
+  gte: String
+  in: [String!]
+  lt: String
+  lte: String
+  not: String
+  notIn: [String!]
+  startsWith: String
 }
