@@ -20,6 +20,12 @@ Install Node dependencies:
 npm install
 ```
 
+### 3. Copy Env
+
+```
+cp .env.example .env
+```
+
 ### 4. Generate Photon (type-safe database client)
 
 Run the following command to generate [Photon JS](https://photonjs.prisma.io/):
