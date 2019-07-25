@@ -4,20 +4,20 @@ This example shows how to implement a **GraphQL server with TypeScript** based o
 
 ## How to use
 
-### 1. nstall dependencies
-
-Install Node dependencies:
-
-```
-npm install
-```
-
-### 2. Install the Prisma 2 CLI
+### 1. Install the Prisma 2 CLI
 
 To run the example, you need the [Prisma 2 CLI](https://github.com/prisma/prisma2/blob/master/docs/prisma-2-cli.md):
 
 ```sh
 npm install -g prisma2
+```
+
+### 2. Install dependencies
+
+Install Node dependencies:
+
+```
+npm install
 ```
 
 ### 4. Generate Photon (type-safe database client)
