@@ -5,12 +5,10 @@ datasource db {
 
 generator photon {
   provider = "photonjs"
-  target   = "darwin"
 }
 
 generator nexus_prisma {
   provider = "nexus-prisma"
-  target   = "darwin"
 }
 
 model Banner {
