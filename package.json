@@ -1,7 +1,8 @@
 {
   "name": "typescript-graphql",
   "scripts": {
-    "start": "ts-node-dev --no-notify --respawn --transpileOnly ./src",
+    "dev": "ts-node-dev --no-notify --respawn --transpileOnly ./src",
+    "start": "ts-node -T ./src",
     "seed": "ts-node prisma/seed.ts",
     "postinstall": "prisma2 generate"
   },
@@ -9,11 +10,12 @@
     "@prisma/nexus": "^0.0.1",
     "graphql-yoga": "1.17.4",
     "nexus": "0.11.7",
-    "nexus-prisma": "^0.3.7"
+    "nexus-prisma": "^0.3.7",
+    "ts-node": "^8.3.0",
+    "prisma2": "^2.0.0-preview-2"
   },
   "devDependencies": {
     "@types/node": "10.14.9",
-    "ts-node": "^8.3.0",
     "ts-node-dev": "1.0.0-pre.40",
     "typescript": "3.5.2"
   }

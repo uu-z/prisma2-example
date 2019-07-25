@@ -2,14 +2,20 @@ import Photon from "@generated/photon";
 const photon = new Photon();
 
 async function main() {
-  const banner = await photon.banners.create({
-    data: {
-      imgUrl: "www.bilibili.com",
-      url: "www.bilibili.com"
-    }
-  });
+  const banners = await Promise.all(
+    [
+      {
+        imgUrl: "www.bilibili.com",
+        url: "www.bilibili.com"
+      }
+    ].map(i =>
+      photon.banners.create({
+        data: i
+      })
+    )
+  );
 
-  console.log({ banner });
+  console.log({ banners });
 }
 
 main()

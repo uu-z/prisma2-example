@@ -1,14 +1,16 @@
 datasource db {
   provider = "postgresql"
-  url      = "postgresql://fbncrqkywcwjuh:b74deca71338d96a828d54198093f3317110147c691a50ae0b03c078b67f87b7@ec2-107-21-120-104.compute-1.amazonaws.com:5432/d1f6rh5mqb1c80?schema=public&sslmode=prefer"
+  url      = env("DATABASE_URL")
 }
 
 generator photon {
   provider = "photonjs"
+  target   = "darwin"
 }
 
 generator nexus_prisma {
   provider = "nexus-prisma"
+  target   = "darwin"
 }
 
 model Banner {

@@ -1,9 +1,10 @@
 import { nexusPrismaPlugin } from "@generated/nexus-prisma";
 import Photon from "@generated/photon";
-import { idArg, makeSchema, objectType, stringArg } from "@prisma/nexus";
+import { idArg, makeSchema, objectType, stringArg, arg } from "@prisma/nexus";
 import { GraphQLServer } from "graphql-yoga";
 import { join } from "path";
 import { Context } from "./types";
+import { inputObjectType } from "nexus/dist";
 
 const photon = new Photon();
 

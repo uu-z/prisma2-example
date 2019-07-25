@@ -1058,6 +1058,11 @@ pinkie@^2.0.0:
   resolved "https://registry.yarnpkg.com/pinkie/-/pinkie-2.0.4.tgz#72556b80cfa0d48a974e80e77248e80ed4f7f870"
   integrity sha1-clVrgM+g1IqXToDnckjoDtT3+HA=
 
+prisma2@^2.0.0-preview-2:
+  version "2.0.0-preview-2"
+  resolved "https://registry.yarnpkg.com/prisma2/-/prisma2-2.0.0-preview-2.tgz#81f0eec1b72f8340d6a4cd35569d0c8a233fbf9f"
+  integrity sha512-unboTATyVsQnL5o6AxUTd6//IjcGsb/9ERouWs6feu1zOPnkdfhvrkYJRyeRia8y2pS9y9RVtY7GhjQS8EWeDw==
+
 proxy-addr@~2.0.5:
   version "2.0.5"
   resolved "https://registry.yarnpkg.com/proxy-addr/-/proxy-addr-2.0.5.tgz#34cbd64a2d81f4b1fd21e76f9f06c8a45299ee34"
